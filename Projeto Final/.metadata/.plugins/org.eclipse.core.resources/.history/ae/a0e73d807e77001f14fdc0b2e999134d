@@ -1,0 +1,5 @@
+package servicosNuvem.minhaBiblioteca.Repositorio;
+
+public interface BookRepo {
+
+}

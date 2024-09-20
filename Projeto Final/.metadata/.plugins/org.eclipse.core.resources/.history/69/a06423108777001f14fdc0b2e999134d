@@ -1,0 +1,66 @@
+package servicosNuvem.minhaBiblioteca.Entidade;
+
+//Enzo Ferroni - RA: 10417100
+//Rodrygo Rogerio - RA:
+//Rafael Neves - RA: 10418316
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Book")
+public class Book {
+	//Atributos
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
+	@Column(nullable = false)
+	private String title;
+	@Column(nullable = false)
+	private String author;
+	@Column(nullable = false)
+	private String description;
+	@Column(nullable = false)
+	private String cover;
+	
+	//Getters & Setters
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
+	public String getCover() {
+		return cover;
+	}
+	public void setCover(String cover) {
+		this.cover = cover;
+	}
+	
+}
